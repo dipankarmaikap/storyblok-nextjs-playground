@@ -1,1 +1,1 @@
-export const accessToken = process.env.STORYBLOK_ACCESS_TOKEN;
+export const accessToken = process.env.NEXT_PUBLIC_STORYBLOK_ACCESS_TOKEN;
