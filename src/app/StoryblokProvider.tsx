@@ -8,6 +8,7 @@ import { accessToken } from "~/variables";
 // import Feature from "./components/Feature";
 // import Grid from "./components/Grid";
 // import dynamic from "next/dynamic";
+import loadable from "@loadable/component";
 
 // const dynamicComponents = {
 //   page: dynamic(() => import("./components/Page")),
@@ -16,10 +17,10 @@ import { accessToken } from "~/variables";
 //   grid: dynamic(() => import("./components/Grid")),
 // };
 const lazyComponents = {
-  page: lazy(() => import("./components/Page")),
-  teaser: lazy(() => import("./components/Teaser")),
-  feature: lazy(() => import("./components/Feature")),
-  grid: lazy(() => import("./components/Grid")),
+  page: loadable(() => import("./components/Page")),
+  teaser: loadable(() => import("./components/Teaser")),
+  feature: loadable(() => import("./components/Feature")),
+  grid: loadable(() => import("./components/Grid")),
 };
 // const components = {
 //   page: Page,
